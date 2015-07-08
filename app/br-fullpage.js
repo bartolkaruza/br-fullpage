@@ -24,8 +24,8 @@
                 angular.element(pages[0]).css(
                     'marginTop', '-' + pageHeight * pageIndex - 48 +'px'
                 );
-                angular.element(document.getElementsByClassName('br-fullpage-nav-item')).removeClass('active');
-                angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
+                angular.element(document.getElementsByClassName('nav-item')).removeClass('active');
+                angular.element(document.getElementsByClassName('nav-item')[pageIndex]).addClass('active');
                 sessionStorage.setItem('br-fullpage-index', pageIndex);
             });
         }
@@ -42,7 +42,7 @@
     function FullPage($window){
         function fullPage($scope, $element, $attr){
             pages = document.getElementsByClassName($attr.pageClass);
-            nav = document.getElementsByClassName('br-fullpage-nav')[0];
+            //nav = document.getElementsByClassName('br-fullpage-nav')[0];
             pageHeight = $window.innerHeight;
             scrolling = false;
 
@@ -56,15 +56,15 @@
             angular.element(pages).addClass('br-fullpage');
 
             //add menu items
-            for (var i = 0; i<pages.length; i++){
-                angular.element(nav).append('<li><i class="br-fullpage-nav-item"></i></li>');
-            }
+            //for (var i = 0; i<pages.length; i++){
+            //    angular.element(nav).append('<li><i class="br-fullpage-nav-item"></i></li>');
+            //}
 
             //align menu in middle
-            nav.style.marginTop = (0 - (pages.length * 17)) + 'px';
-            angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
+            //nav.style.marginTop = (0 - (pages.length * 17)) + 'px';
+            //angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
             angular.element(pages[0]).css(
-                'marginTop', '-' + pageHeight * pageIndex - 48 + 'px'
+               'marginTop', '-' + pageHeight * pageIndex - 48 + 'px'
             );
 
             //set height
@@ -92,8 +92,8 @@
                     angular.element(pages[0]).css(
                         'marginTop', '-' + pageHeight * pageIndex - 48 + 'px'
                     );
-                    angular.element(document.getElementsByClassName('br-fullpage-nav-item')).removeClass('active');
-                    angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
+                    angular.element(document.getElementsByClassName('nav-item')).removeClass('active');
+                    angular.element(document.getElementsByClassName('nav-item')[pageIndex]).addClass('active');
                     sessionStorage.setItem('br-fullpage-index', pageIndex);
 
                     setTimeout(function () {
