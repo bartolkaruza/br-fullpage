@@ -54,7 +54,10 @@
       //retrieve page index from session storage
       if(navItemClass) {
         pageIndex = sessionStorage.getItem('br-fullpage-index');
+      } else {
+        pageIndex = 0;
       }
+
       if (!pageIndex) {
         pageIndex = 0;
       }
