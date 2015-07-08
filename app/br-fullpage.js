@@ -22,7 +22,7 @@
                     }
                 }
                 angular.element(pages[0]).css(
-                    'marginTop', '-' + pageHeight * pageIndex + 'px'
+                    'marginTop', '-' + pageHeight * pageIndex - 48 +'px'
                 );
                 angular.element(document.getElementsByClassName('br-fullpage-nav-item')).removeClass('active');
                 angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
@@ -64,7 +64,7 @@
             nav.style.marginTop = (0 - (pages.length * 17)) + 'px';
             angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
             angular.element(pages[0]).css(
-                'marginTop', '-' + pageHeight * pageIndex + 'px'
+                'marginTop', '-' + pageHeight * pageIndex - 48 + 'px'
             );
 
             //set height
@@ -90,7 +90,7 @@
                         nextPage();
                     }
                     angular.element(pages[0]).css(
-                        'marginTop', '-' + pageHeight * pageIndex + 'px'
+                        'marginTop', '-' + pageHeight * pageIndex - 48 + 'px'
                     );
                     angular.element(document.getElementsByClassName('br-fullpage-nav-item')).removeClass('active');
                     angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
@@ -148,7 +148,7 @@
             function resize(){
                 pageHeight = $window.innerHeight;
                 angular.element(pages[0]).css(
-                    'marginTop', '-' + pageHeight * pageIndex + 'px'
+                    'marginTop', '-' + pageHeight * pageIndex - 48 + 'px'
                 );
                 setHeight();
             }
